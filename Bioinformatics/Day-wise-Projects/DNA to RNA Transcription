@@ -1,0 +1,20 @@
+'''Name of the project : DNA to RNA Transcription 
+Written by : R.S.Krishna priya 
+Date : 04/06/2025'''
+def dna_to_rna(dna):
+    """Converts DNA (Coding strand) to RNA (mRNA) by replacing Thymine (T) with Uracil (U)."""
+    return dna.upper().replace('T','U')
+# Take input from user
+dna_input= input ("Enter the DNA strand: ")      
+# Checking the validity of the input 
+valid="TRUE "
+for base in dna_input:
+    if base not in 'ATCG':
+        valid=FALSE
+        break
+if valid:
+    # Convert DNA to RNA
+    rna_output = dna_to_rna(dna_input)
+    print("The RNA strand is:", rna_output)
+else:
+    print("Invalid DNA strand. Please enter a valid DNA sequence containing only A, T, C, and G.")

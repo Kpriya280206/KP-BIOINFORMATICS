@@ -1,8 +1,10 @@
-print("welcome to the tip calculator")
-bill=int(input("what was the total bill?"))
-tip=int(input("what percentage tip would you like to give?"))
-people=int(input("how many people to split the bill?"))
-tip=tip/100
-totalbill=bill+bill*tip
-totalperperson=totalbill/people
-print("each person should pay",totalperperson)
+print("Welcome to tip calculator!")
+bill=int(input("enter the bill amount:"))
+tip=int(input("enter the tip percentage:"))
+people=int(input("enter the number of people:"))
+total_tip_percent=tip/100
+total_tip=bill*total_tip_percent
+total_bill=bill+total_tip
+total_bill_per_person=total_bill/people
+total_bill_per_person=round(total_bill_per_person,2)
+print("Each person should pay:", total_bill_per_person)
